@@ -103,9 +103,158 @@ public class Main {
 
         new MyFrame();
 
-         */
+
 
         //---------------------------------------------------------------------------------------------------------------
+
+        //Border Layout
+
+        JFrame frame = new JFrame();
+
+        frame.setTitle("JAVA GUI");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500,500);
+        frame.setLayout(new BorderLayout(10,10)); //horizontal and vertical gap
+        frame.setVisible(true); //makes seen
+
+        JPanel Panel1 = new JPanel();
+        JPanel Panel2 = new JPanel();
+        JPanel Panel3 = new JPanel();
+        JPanel Panel4 = new JPanel();
+        JPanel Panel5 = new JPanel();
+
+        Panel1.setBackground(Color.red);
+        Panel2.setBackground(Color.green);
+        Panel3.setBackground(Color.blue);
+        Panel4.setBackground(Color.yellow);
+        Panel5.setBackground(Color.orange);
+
+        Panel1.setPreferredSize(new Dimension(100,100));
+        Panel2.setPreferredSize(new Dimension(100,100));
+        Panel3.setPreferredSize(new Dimension(100,100));
+        Panel4.setPreferredSize(new Dimension(100,100));
+        Panel5.setPreferredSize(new Dimension(100,100));
+
+        frame.add(Panel1, BorderLayout.NORTH);
+        frame.add(Panel2, BorderLayout.EAST);
+        frame.add(Panel3, BorderLayout.WEST);
+        frame.add(Panel4, BorderLayout.SOUTH);
+        frame.add(Panel5, BorderLayout.CENTER);
+
+
+
+       // you can add panels upon panels; the panel acts like the frame
+       // ex: Panel5.setLayout(new BorderLayout());
+       // Panel5.add(Panel6, BorderLayout.NORTH);
+
+
+
+        //---------------------------------------------------------------------------------------------------------------
+
+        //FlowLayout
+
+        JFrame frame = new JFrame();
+
+        frame.setTitle("JAVA GUI");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500,500);
+        frame.setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
+
+        frame.add(new JButton("1"));
+        frame.add(new JButton("2"));
+        frame.add(new JButton("3"));
+        frame.add(new JButton("4"));
+        frame.add(new JButton("5"));
+
+        frame.setVisible(true);
+
+        //---------------------------------------------------------------------------------------------------------------
+
+        //GridLayout
+
+        JFrame frame = new JFrame();
+
+        frame.setTitle("JAVA GUI");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500,500);
+        frame.setLayout(new GridLayout(3,3,10,10));
+
+
+        frame.add(new JButton("1"));
+        frame.add(new JButton("2"));
+        frame.add(new JButton("3"));
+        frame.add(new JButton("4"));
+        frame.add(new JButton("5"));
+        frame.add(new JButton("6"));
+        frame.add(new JButton("7"));
+        frame.add(new JButton("8"));
+        frame.add(new JButton("9"));
+
+
+        frame.setVisible(true);
+
+
+        //---------------------------------------------------------------------------------------------------------------
+
+        //JLayeredPane
+
+        JLabel label1 = new JLabel();
+        label1.setOpaque(true);
+        label1.setBounds(50,50,200,200);
+        label1.setBackground(Color.black);
+
+        JLabel label2 = new JLabel();
+        label2.setOpaque(true);
+        label2.setBounds(100,100,200,200);
+        label2.setBackground(Color.green);
+
+        JLabel label3 = new JLabel();
+        label3.setOpaque(true);
+        label3.setBounds(150,150,200,200);
+        label3.setBackground(Color.red);
+
+
+
+        JLayeredPane lPane = new JLayeredPane();
+        lPane.setBounds(0,0,500,500);
+
+        lPane.add(label1, Integer.valueOf(0)); //allows you to choose the layer of the label
+        lPane.add(label2, Integer.valueOf(2));
+        lPane.add(label3, Integer.valueOf(1));
+
+
+        JFrame frame = new JFrame();
+
+        frame.add(lPane); //add the layered pane to the frame
+
+        frame.setTitle("JAVA GUI");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500,500);
+        frame.setLayout(null);
+
+        frame.setVisible(true);
+
+
+        //---------------------------------------------------------------------------------------------------------------
+
+        //Open New Window
+
+        LaunchPage launchPage = new LaunchPage();
+*/
+
+        //---------------------------------------------------------------------------------------------------------------
+
+        //JOptionPane
+
+
+
+
+
+
+
+
+
+
 
 
     }
