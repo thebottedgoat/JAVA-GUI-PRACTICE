@@ -240,21 +240,42 @@ public class Main {
         //Open New Window
 
         LaunchPage launchPage = new LaunchPage();
-*/
+
 
         //---------------------------------------------------------------------------------------------------------------
 
         //JOptionPane
 
+        //JOptionPane.showMessageDialog(null, "Your Computer Has a Virus! 😭 You Done Messed Up lil bro", "ERROR", JOptionPane.PLAIN_MESSAGE);
+
+        //JOptionPane.showMessageDialog(null, "Your Computer Has a Virus! 😭 You Done Messed Up lil bro", "ERROR", JOptionPane.INFORMATION_MESSAGE);
+
+        //JOptionPane.showMessageDialog(null, "Your Computer Has a Virus! 😭 You Done Messed Up lil bro", "ERROR", JOptionPane.QUESTION_MESSAGE);
+
+        //JOptionPane.showMessageDialog(null, "Your Computer Has a Virus! 😭 You Done Messed Up lil bro", "ERROR", JOptionPane.WARNING_MESSAGE);
+
+        //JOptionPane.showMessageDialog(null, "Your Computer Has a Virus! 😭 You Done Messed Up lil bro", "ERROR", JOptionPane.ERROR_MESSAGE);
+
+        //JOptionPane.showConfirmDialog(null,"Want 1000 Vbucks?","Free Vbucks",JOptionPane.YES_NO_CANCEL_OPTION);
+        //String x = JOptionPane.showInputDialog("How many Vbucks Do you want?");
+        //System.out.println("Take your mom's credit card info and buy " + x + " Vbucks!!!");
+
+        //String[] arr = {"apple", "banana", "orange"}; //This allows for you to use your array as options for buttons
+        //JOptionPane.showOptionDialog(null,"What fruit is your favorite","Fruity",
+        // JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE,null,arr,0); //you can also add images
 
 
 
 
+        //---------------------------------------------------------------------------------------------------------------
 
+        //JTextField
 
+        MyFrameTwo frame= new MyFrameTwo();
 
+*/
 
-
+        //---------------------------------------------------------------------------------------------------------------
 
 
     }
