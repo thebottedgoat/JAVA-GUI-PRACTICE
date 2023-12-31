@@ -309,14 +309,14 @@ public class Main {
         //Progress Bar
 
         MyFrame frame = new MyFrame();
-*/
+
         //---------------------------------------------------------------------------------------------------------------
 
         //Menu Bars
 
         MyFrame frame = new MyFrame();
 
-
+*/
 
     }
     }
