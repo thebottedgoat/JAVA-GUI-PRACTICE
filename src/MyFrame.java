@@ -430,12 +430,190 @@ public class MyFrame extends JFrame implements ActionListener {
     }
 }
 
+
+
+//JFileChooser
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+public class MyFrame extends JFrame implements ActionListener {
+
+    JButton button;
+
+    MyFrame(){
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(new FlowLayout());
+
+
+        button = new JButton("Select File");
+        button.setFocusable(false);
+        button.addActionListener(this);
+
+
+
+
+        this.add(button);
+        this.pack();
+        this.setVisible(true);
+
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if(e.getSource()==button){
+
+            JFileChooser fileChooser = new JFileChooser();
+
+            fileChooser.setCurrentDirectory(new File("."));
+
+            //int response = fileChooser.showOpenDialog(null); //select file to open
+            int response = fileChooser.showSaveDialog(null); //select file to save
+
+
+            if(response == JFileChooser.APPROVE_OPTION){
+
+                File file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+
+
+            }
+
+        }
+
+    }
+}
+
+
+//JFileChooser
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MyFrame extends JFrame implements ActionListener {
+
+    JButton button;
+    JLabel label;
+
+    MyFrame() {
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(new FlowLayout());
+
+
+        button = new JButton("Pick Color");
+        button.setFocusable(false);
+        button.addActionListener(this);
+
+        label = new JLabel();
+        label.setBackground(Color.WHITE);
+        label.setText("Change My Color");
+        label.setForeground(Color.BLACK);
+        label.setOpaque(true);
+
+        this.add(button);
+        this.add(label);
+        this.pack();
+        this.setVisible(true);
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == button) {
+
+            JColorChooser jColor = new JColorChooser();
+
+            Color color = JColorChooser.showDialog(null,"Pick A Color",Color.BLACK);
+
+                    label.setForeground(color);
+
+
+            }
+
+        }
+    }
+
+
+
+//KeyListener
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class MyFrame extends JFrame implements KeyListener {
+
+
+    JLabel label;
+
+    MyFrame() {
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(500,500);
+        this.setLayout(null);
+        this.addKeyListener(this);
+
+        label = new JLabel();
+        label.setBounds(0,0,40,40);
+        label.setBackground(Color.BLUE);
+        label.setOpaque(true);
+
+        this.add(label);
+        this.setVisible(true);
+
+    }
+
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        switch (e.getKeyChar()){
+            case 'a': label.setLocation(label.getX()-5, label.getY());
+                break;
+            case 's': label.setLocation(label.getX(), label.getY()+5);
+                break;
+            case 'd': label.setLocation(label.getX()+5, label.getY());
+                break;
+            case 'w': label.setLocation(label.getX(), label.getY()-5);
+
+        }
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()){
+            case 37: label.setLocation(label.getX()-5, label.getY());
+                break;
+            case 38: label.setLocation(label.getX(), label.getY()-5);
+                break;
+            case 39: label.setLocation(label.getX()+5, label.getY());
+                break;
+            case 40: label.setLocation(label.getX(), label.getY()+5);
+
+        }
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+        //System.out.println("You released key char: " + e.getKeyChar());
+        System.out.println("You released key code: " + e.getKeyCode());
+
+    }
+}
+
 */
-
-
-
-
-
 
 
 
